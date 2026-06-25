@@ -1,0 +1,362 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: artigo.aux
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+The style file: sbc.bst
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+format.names$ is an unknown function---line 183 of file sbc.bst
+Database file #1: referencias.bib
+format.names$ is an unknown function---line 781 of file sbc.bst
+author.organization.sort is an unknown function---line 835 of file sbc.bst
+author.organization.sort is an unknown function---line 837 of file sbc.bst
+You can't pop an empty literal stack for entry he2016deep
+while executing---line 857 of file sbc.bst
+0 is an integer literal, not a function, for entry he2016deep
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry he2016deep
+while executing---line 857 of file sbc.bst
+"Os " is a string literal, not an integer, for entry he2016deep
+while executing---line 857 of file sbc.bst
+"O " is a string literal, not an integer, for entry he2016deep
+while executing---line 857 of file sbc.bst
+"An " is a string literal, not an integer, for entry he2016deep
+while executing---line 857 of file sbc.bst
+"Deep residual learning for image recognition" is a string literal, not an integer, for entry he2016deep
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry he2016deep
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry he2016deep
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry he2016deep
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry he2016deep
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry he2016deep
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry selvaraju2017grad
+while executing---line 857 of file sbc.bst
+0 is an integer literal, not a function, for entry selvaraju2017grad
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry selvaraju2017grad
+while executing---line 857 of file sbc.bst
+"Os " is a string literal, not an integer, for entry selvaraju2017grad
+while executing---line 857 of file sbc.bst
+"O " is a string literal, not an integer, for entry selvaraju2017grad
+while executing---line 857 of file sbc.bst
+"An " is a string literal, not an integer, for entry selvaraju2017grad
+while executing---line 857 of file sbc.bst
+"Grad-cam: Visual explanations from deep networks via gradient-based localization" is a string literal, not an integer, for entry selvaraju2017grad
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry selvaraju2017grad
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry selvaraju2017grad
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry selvaraju2017grad
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry selvaraju2017grad
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry selvaraju2017grad
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry qdrant2021
+while executing---line 857 of file sbc.bst
+0 is an integer literal, not a function, for entry qdrant2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry qdrant2021
+while executing---line 857 of file sbc.bst
+"Os " is a string literal, not an integer, for entry qdrant2021
+while executing---line 857 of file sbc.bst
+"O " is a string literal, not an integer, for entry qdrant2021
+while executing---line 857 of file sbc.bst
+"An " is a string literal, not an integer, for entry qdrant2021
+while executing---line 857 of file sbc.bst
+"{Qdrant - Vector Similarity Search Engine}" is a string literal, not an integer, for entry qdrant2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry qdrant2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry qdrant2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry qdrant2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry qdrant2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry qdrant2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry minio2021
+while executing---line 857 of file sbc.bst
+0 is an integer literal, not a function, for entry minio2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry minio2021
+while executing---line 857 of file sbc.bst
+"Os " is a string literal, not an integer, for entry minio2021
+while executing---line 857 of file sbc.bst
+"O " is a string literal, not an integer, for entry minio2021
+while executing---line 857 of file sbc.bst
+"An " is a string literal, not an integer, for entry minio2021
+while executing---line 857 of file sbc.bst
+"{MinIO - High Performance Object Storage}" is a string literal, not an integer, for entry minio2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry minio2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry minio2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry minio2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry minio2021
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry minio2021
+while executing---line 857 of file sbc.bst
+1 is an integer literal, not a string, for entry date2004introduction
+while executing---line 857 of file sbc.bst
+"Os " is a string literal, not an integer, for entry date2004introduction
+while executing---line 857 of file sbc.bst
+"O " is a string literal, not an integer, for entry date2004introduction
+while executing---line 857 of file sbc.bst
+"An " is a string literal, not an integer, for entry date2004introduction
+while executing---line 857 of file sbc.bst
+"An introduction to database systems" is a string literal, not an integer, for entry date2004introduction
+while executing---line 857 of file sbc.bst
+"Date, C. J." is a string literal, not an integer, for entry date2004introduction
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry date2004introduction
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry date2004introduction
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry date2004introduction
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry ribeiro2016should
+while executing---line 857 of file sbc.bst
+0 is an integer literal, not a function, for entry ribeiro2016should
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry ribeiro2016should
+while executing---line 857 of file sbc.bst
+"Os " is a string literal, not an integer, for entry ribeiro2016should
+while executing---line 857 of file sbc.bst
+"O " is a string literal, not an integer, for entry ribeiro2016should
+while executing---line 857 of file sbc.bst
+"An " is a string literal, not an integer, for entry ribeiro2016should
+while executing---line 857 of file sbc.bst
+"{``Why Should I Trust You?'': Explaining the Predictions of Any Classifier}" is a string literal, not an integer, for entry ribeiro2016should
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry ribeiro2016should
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry ribeiro2016should
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry ribeiro2016should
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry ribeiro2016should
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry ribeiro2016should
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry johnson2019billion
+while executing---line 857 of file sbc.bst
+0 is an integer literal, not a function, for entry johnson2019billion
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry johnson2019billion
+while executing---line 857 of file sbc.bst
+"Os " is a string literal, not an integer, for entry johnson2019billion
+while executing---line 857 of file sbc.bst
+"O " is a string literal, not an integer, for entry johnson2019billion
+while executing---line 857 of file sbc.bst
+"An " is a string literal, not an integer, for entry johnson2019billion
+while executing---line 857 of file sbc.bst
+"Billion-scale similarity search with {GPUs}" is a string literal, not an integer, for entry johnson2019billion
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry johnson2019billion
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry johnson2019billion
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry johnson2019billion
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry johnson2019billion
+while executing---line 857 of file sbc.bst
+You can't pop an empty literal stack for entry johnson2019billion
+while executing---line 857 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry he2016deep
+while executing---line 909 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry selvaraju2017grad
+while executing---line 909 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry qdrant2021
+while executing---line 909 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry minio2021
+while executing---line 909 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry date2004introduction
+while executing---line 909 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry ribeiro2016should
+while executing---line 909 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry johnson2019billion
+while executing---line 909 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry johnson2019billion
+while executing---line 911 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry ribeiro2016should
+while executing---line 911 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry date2004introduction
+while executing---line 911 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry minio2021
+while executing---line 911 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry qdrant2021
+while executing---line 911 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry selvaraju2017grad
+while executing---line 911 of file sbc.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry he2016deep
+while executing---line 911 of file sbc.bst
+2 is an integer literal, not a string, for entry he2016deep
+while executing---line 923 of file sbc.bst
+3 is an integer literal, not a string, for entry he2016deep
+while executing---line 923 of file sbc.bst
+4 is an integer literal, not a string, for entry he2016deep
+while executing---line 923 of file sbc.bst
+ptr=8, stack=
+{vv~}{ll}{, jj}{, f.}
+He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian
+{vv~}{ll}{, jj}{, f.}
+He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian
+{vv~}{ll}{, jj}{, f.}
+1
+He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian
+
+---the literal stack isn't empty for entry he2016deep
+while executing---line 923 of file sbc.bst
+2 is an integer literal, not a string, for entry selvaraju2017grad
+while executing---line 923 of file sbc.bst
+3 is an integer literal, not a string, for entry selvaraju2017grad
+while executing---line 923 of file sbc.bst
+4 is an integer literal, not a string, for entry selvaraju2017grad
+while executing---line 923 of file sbc.bst
+5 is an integer literal, not a string, for entry selvaraju2017grad
+while executing---line 923 of file sbc.bst
+6 is an integer literal, not a string, for entry selvaraju2017grad
+while executing---line 923 of file sbc.bst
+Warning--empty publisher in selvaraju2017grad
+ptr=12, stack=
+{vv~}{ll}{, jj}{, f.}
+Selvaraju, Ramprasaath R. and Cogswell, Michael and Das, Abhishek and Vedantam, Ramakrishna and Parikh, Devi and Batra, Dhruv
+{vv~}{ll}{, jj}{, f.}
+Selvaraju, Ramprasaath R. and Cogswell, Michael and Das, Abhishek and Vedantam, Ramakrishna and Parikh, Devi and Batra, Dhruv
+{vv~}{ll}{, jj}{, f.}
+Selvaraju, Ramprasaath R. and Cogswell, Michael and Das, Abhishek and Vedantam, Ramakrishna and Parikh, Devi and Batra, Dhruv
+{vv~}{ll}{, jj}{, f.}
+Selvaraju, Ramprasaath R. and Cogswell, Michael and Das, Abhishek and Vedantam, Ramakrishna and Parikh, Devi and Batra, Dhruv
+{vv~}{ll}{, jj}{, f.}
+1
+Selvaraju, Ramprasaath R. and Cogswell, Michael and Das, Abhishek and Vedantam, Ramakrishna and Parikh, Devi and Batra, Dhruv
+
+---the literal stack isn't empty for entry selvaraju2017grad
+while executing---line 923 of file sbc.bst
+1 is an integer literal, not a string, for entry qdrant2021
+while executing---line 923 of file sbc.bst
+ptr=2, stack=
+{Qdrant}
+
+---the literal stack isn't empty for entry qdrant2021
+while executing---line 923 of file sbc.bst
+1 is an integer literal, not a string, for entry minio2021
+while executing---line 923 of file sbc.bst
+ptr=2, stack=
+{MinIO}
+
+---the literal stack isn't empty for entry minio2021
+while executing---line 923 of file sbc.bst
+1 is an integer literal, not a string, for entry date2004introduction
+while executing---line 923 of file sbc.bst
+ptr=2, stack=
+Date, C. J.
+
+---the literal stack isn't empty for entry date2004introduction
+while executing---line 923 of file sbc.bst
+2 is an integer literal, not a string, for entry ribeiro2016should
+while executing---line 923 of file sbc.bst
+3 is an integer literal, not a string, for entry ribeiro2016should
+while executing---line 923 of file sbc.bst
+Warning--empty publisher in ribeiro2016should
+ptr=6, stack=
+{vv~}{ll}{, jj}{, f.}
+Ribeiro, Marco Tulio and Singh, Sameer and Guestrin, Carlos
+{vv~}{ll}{, jj}{, f.}
+1
+Ribeiro, Marco Tulio and Singh, Sameer and Guestrin, Carlos
+
+---the literal stack isn't empty for entry ribeiro2016should
+while executing---line 923 of file sbc.bst
+2 is an integer literal, not a string, for entry johnson2019billion
+while executing---line 923 of file sbc.bst
+3 is an integer literal, not a string, for entry johnson2019billion
+while executing---line 923 of file sbc.bst
+ptr=6, stack=
+{vv~}{ll}{, jj}{, f.}
+Johnson, Jeff and Douze, Matthijs and J{\'e}gou, Herv{\'e}
+{vv~}{ll}{, jj}{, f.}
+1
+Johnson, Jeff and Douze, Matthijs and J{\'e}gou, Herv{\'e}
+
+---the literal stack isn't empty for entry johnson2019billion
+while executing---line 923 of file sbc.bst
+You've used 7 entries,
+            1861 wiz_defined-function locations,
+            461 strings with 4148 characters,
+and the built_in function-call counts, 2063 in all, are:
+= -- 202
+> -- 78
+< -- 2
++ -- 27
+- -- 20
+* -- 161
+:= -- 320
+add.period$ -- 7
+call.type$ -- 7
+change.case$ -- 20
+chr.to.int$ -- 1
+cite$ -- 9
+duplicate$ -- 95
+empty$ -- 174
+format.name$ -- 0
+if$ -- 451
+int.to.chr$ -- 7
+int.to.str$ -- 0
+missing$ -- 5
+newline$ -- 24
+num.names$ -- 8
+pop$ -- 30
+preamble$ -- 1
+purify$ -- 7
+quote$ -- 0
+skip$ -- 103
+stack$ -- 0
+substring$ -- 147
+swap$ -- 25
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 2
+while$ -- 16
+width$ -- 14
+write$ -- 78
+(There were 121 error messages)
