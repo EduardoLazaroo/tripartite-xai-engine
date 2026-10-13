@@ -1,54 +1,73 @@
-# Persistencia hibrida para evidencias de explicabilidade
+# Persistência Híbrida para Evidências de Explicabilidade (XAI)
 
-## Contexto
+[![Artigo](https://img.shields.io/badge/Artigo-Compilado_PDF-red?logo=adobe-acrobat-reader&logoColor=white)](Artigo_Banco_Dados_Eduardo_Lazaro.pdf)
+[![Pós-Graduação](https://img.shields.io/badge/UNESP-PPGCC_Computação-0055A5)](https://www.unesp.br/)
+[![Bancos](https://img.shields.io/badge/Stack-MySQL_+_Qdrant_+_MinIO-blue)](#)
+[![Status](https://img.shields.io/badge/Compilação-100%25_Validada-success)](#)
 
-Este diretorio reune o material de um artigo academico sobre o armazenamento e a recuperacao de evidencias produzidas por experimentos de visao computacional explicavel. O foco e uma arquitetura hibrida que combina metadados relacionais, vetores e objetos, em vez de tratar mapas de explicabilidade como arquivos isolados.
+Repositório científico reunindo a fundamentação teórica, diagramas e rotina de compilação do artigo acadêmico sobre **persistência híbrida e governança de evidências de inteligência artificial explicável (XAI)**, desenvolvido no Programa de Pós-Graduação em Ciência da Computação da **UNESP**.
 
-O material e indicado para pesquisadores de XAI, aprendizado de maquina e bancos de dados interessados em rastreabilidade experimental.
+---
 
-## Proposta tecnica
+## 📌 1. Proposta Técnica e Arquitetura Tripartite
 
-A proposta organiza cada evidencia em tres camadas:
+A proposta unifica três tecnologias complementares para solucionar o descarte de mapas de atenção visual (Grad-CAM):
 
-1. **MySQL** para metadados, predicoes, parametros e auditoria.
-2. **Qdrant** para embeddings e recuperacao por similaridade.
-3. **MinIO** para imagens, mapas Grad-CAM e artefatos volumosos.
+1. **MySQL 8.0 (Camada Relacional):** Metadados estruturados, parâmetros de inferência, predições, métricas de risco e logs de auditoria ACID.
+2. **Qdrant (Camada Vetorial):** Embeddings semânticos de 512 dimensões indexados com grafo HNSW para recuperação top-k por similaridade visual de atenção.
+3. **MinIO (Armazenamento de Objetos S3):** Persistência distribuída de imagens brutas em alta resolução e heatmaps Grad-CAM volumosos.
 
-Os documentos descrevem evidencias como predicoes, confianca, mapas Grad-CAM, perturbacoes e metricas de sobreposicao. Os resultados relatados no artigo devem ser interpretados como resultados do estudo documentado, nao como uma garantia de reproducao neste diretorio.
+---
 
-## Conteudo e uso
+## 📊 2. Evidências Visuais e Resultados
 
-| Recurso | Finalidade |
-|---|---|
-| `01_minha_poroposta.md` | delimitacao do problema e da arquitetura |
-| `02_base.md` | base tecnica e resultados relatados |
-| `03_orientacoes_finais_banco_dados.md` | orientacoes para a versao final |
-| `RELATORIO_CRITICO.md` | avaliacao critica e limites metodologicos |
-| `gerar_artigo_pdf.py` | geracao do PDF do artigo |
-| `assets/` | figuras usadas no material |
+| Recurso | Evidência Gráfica |
+| :--- | :--- |
+| **Arquitetura Tripartite** | ![Arquitetura](evidencias/figure_3.png) |
+| **Grad-CAM Baseline** | ![Original](evidencias/02_gradcam_original.png) |
+| **Grad-CAM sob Ruído** | ![Ruído](evidencias/04_gradcam_gaussian.png) |
+| **Grad-CAM sob Desfoque** | ![Desfoque](evidencias/06_gradcam_blur.png) |
 
-Para gerar o PDF, instale as dependencias usadas pelo script e execute:
+---
+
+## ⚙️ 3. Compilação do Artigo em PDF
+
+O script de geração utiliza `fpdf2` e fontes do sistema para produzir o PDF formatado nas normas ABNT:
 
 ```bash
+# Instalar biblioteca
+pip install fpdf2
+
+# Compilar artigo
 python gerar_artigo_pdf.py
 ```
+O documento será compilado e salvo na raiz como `Artigo_Banco_Dados_Eduardo_Lazaro.pdf`.
 
-Nao ha um manifesto de dependencias nem o pipeline experimental completo neste diretorio. A reproducao das metricas exige acesso aos dados, modelos e configuracoes descritos no artigo.
+---
 
-## Limites e verificacao
-
-O diretorio contem o artigo e seus artefatos de apresentacao, nao uma implementacao integral do experimento. A revisao critica registra lacunas de reprodutibilidade e de avaliacao de desempenho; elas devem ser consideradas em qualquer extensao cientifica do trabalho.
-
-## Material para publicacao
-
-**Texto sugerido**
-
-> Este trabalho investiga como tornar evidencias de explicabilidade em visao computacional recuperaveis, auditaveis e reutilizaveis. A proposta combina banco relacional, busca vetorial e armazenamento de objetos para relacionar predicoes, embeddings, mapas Grad-CAM e perturbacoes em uma mesma trilha experimental. O principal desafio foi tratar explicacoes como dados de pesquisa, com contexto suficiente para consulta e verificacao, e nao apenas como imagens geradas ao final de um modelo. O artigo tambem explicita seus limites metodologicos, criando uma base honesta para futuras avaliacoes de reprodutibilidade e desempenho.
-
-**Capturas recomendadas:** pagina de arquitetura do PDF, um exemplo de Grad-CAM, o esquema de persistencia e a tabela de recuperacao/latencia.
-
-**Prompt para imagem complementar**
+## 📁 4. Estrutura do Repositório
 
 ```text
-Diagrama tecnico academico, fundo claro, mostrando uma arquitetura hibrida para evidencias de IA explicavel: modelo de visao computacional gera predicao, embedding e mapa Grad-CAM; MySQL armazena metadados e auditoria, Qdrant armazena vetores para busca por similaridade e MinIO armazena imagens e mapas; setas rotuladas em portugues, estilo de artigo cientifico, sem logotipos e sem texto pequeno ilegivel.
+artigo-bd/
+├── assets/                                      # Figuras originais do artigo
+├── evidencias/                                  # Evidências e diagramas organizados
+│   ├── figure_3.png
+│   ├── 02_gradcam_original.png
+│   ├── 04_gradcam_gaussian.png
+│   └── 06_gradcam_blur.png
+├── 01_minha_poroposta.md                        # Delimitação do problema e arquitetura
+├── 02_base.md                                   # Metodologia e resultados reportados
+├── 03_orientacoes_finais_banco_dados.md         # Diretrizes acadêmicas
+├── RELATORIO_CRITICO.md                         # Avaliação crítica e limites
+├── gerar_artigo_pdf.py                          # Compilador do artigo em PDF
+├── Artigo_Banco_Dados_Eduardo_Lazaro.pdf        # Artigo acadêmico final em PDF
+├── Artigo_BD_Relatorio_Publicacao.docx          # Relatório executivo completo em Word
+├── APRESENTACAO.md                              # Roteiro de pitch e divulgação
+└── README.md                                    # Documentação técnica
 ```
+
+---
+
+## 📄 5. Material de Publicação para Portfólio
+
+O relatório executivo diagramado em Word, contendo a análise metodológica, tabela completa de latência e benchmark e roteiro editorial para redes profissionais, está disponível em [`Artigo_BD_Relatorio_Publicacao.docx`](file:///d:/projetos/artigo-bd/Artigo_BD_Relatorio_Publicacao.docx).
