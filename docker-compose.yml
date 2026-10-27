@@ -64,11 +64,12 @@ services:
       MINIO_ACCESS_KEY: minioadmin
       MINIO_SECRET_KEY: minioadmin
       MINIO_BUCKET: evidence-assets
+      PYTHONUNBUFFERED: "1"
     volumes:
       - .:/app
       - torch_cache:/root/.cache/torch
     working_dir: /app
-    command: python src/benchmark.py --input images/ --output reports/ --workers 4
+    command: python src/benchmark.py --input images/ --output reports/ --workers 1
 
 # Volumes persistentes
 volumes:

@@ -119,7 +119,7 @@ def get_or_create_label(db: DatabaseClient, class_index: int, labels: list[str])
         hierarchy_path=f'imagenet/{class_index}',
         description=f'ImageNet class index {class_index}',
     )
-    result = db.insert_record(record)
+    result = db.insert_record(record, flush=True)
     _label_cache[label_name] = result
     return result
 
@@ -145,7 +145,7 @@ def persist_media_asset(
         width=image.width,
         height=image.height,
     )
-    return db.insert_record(record)
+    return db.insert_record(record, flush=True)
 
 
 def log_audit(db: DatabaseClient, entity_type: str, entity_id: str, action: str, details: dict):
@@ -189,7 +189,7 @@ def process_variant(
             kernel_size=noise_spec.get('kernel_size'),
             parameters=noise_spec.get('parameters', {}),
         )
-        db.insert_record(noise_record)
+        db.insert_record(noise_record, flush=True)
 
     log.substep("Executando inferencia do modelo")
     input_tensor = preprocess_image(variant_image)
@@ -213,7 +213,7 @@ def process_variant(
         model_version='resnet50-imagenet1k-v2',
         inference_duration_ms=inference_result['inference_duration_ms'],
     )
-    db.insert_record(inference)
+    db.insert_record(inference, flush=True)
 
     log.substep("Persistindo imagem perturbada no armazenamento")
     asset_type = 'original' if noise_type == 'none' else f'noisy_{noise_type}'
@@ -245,7 +245,7 @@ def process_variant(
         dimension=len(embedding_vector),
         norm=float(np.linalg.norm(embedding_vector)),
         embedding_metadata={'source': 'resnet50_penultimate', 'noise_type': noise_type},
-    ))
+    ), flush=True)
     timing.embedding_ms = sw.elapsed_ms()
     sw.reset()
     log.substep(f"Embedding indexado: dimensao={len(embedding_vector)}, tempo={timing.embedding_ms}ms")
@@ -267,7 +267,7 @@ def process_variant(
         media_asset_id=gradcam_asset.media_asset_id,
         activation_distribution=activation_distribution,
         region_stats=region_stats,
-    ))
+    ), flush=True)
     timing.gradcam_ms = sw.elapsed_ms()
     timing.persistence_ms = timing.embedding_ms + timing.gradcam_ms
     log.substep(f"Variante {noise_type} concluida: tempo_total={timing.inference_ms + timing.persistence_ms}ms")
@@ -527,6 +527,7 @@ def process_image(
     )
 
     log.image_done(image_name, baseline.predicted_label, baseline.confidence, total_timing.total_ms)
+    gradcam.remove()
 
     return ProcessingResult(
         experiment_id=experiment.experiment_id,

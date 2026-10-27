@@ -47,6 +47,7 @@ class ValidationRunner:
         if script_name == '03_check_pipeline.py':
             try:
                 import torch
+                import torchvision
                 cmd = [sys.executable, str(script_path)]
             except ImportError:
                 cmd = ["docker", "compose", "run", "--rm", "pipeline", "python", f"experiment_validation/{script_name}"]

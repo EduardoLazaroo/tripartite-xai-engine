@@ -15,3 +15,5 @@ env/
 $null
 .DS_Store
 Thumbs.db
+reports/figures/
+experiment_validation/reports/

@@ -38,7 +38,8 @@ from sqlalchemy import (
 )
 from config import EMBEDDING_DIMENSION
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, sessionmaker
+import threading
+from sqlalchemy.orm import relationship, scoped_session, sessionmaker
 from sqlalchemy import create_engine
 
 from qdrant_client import QdrantClient as QdrantApiClient
@@ -204,23 +205,27 @@ class BenchmarkRun(Base):
 class DatabaseClient:
     def __init__(self, dsn: str):
         self.engine = create_engine(dsn, future=True, pool_size=10, max_overflow=20)
-        self.Session = sessionmaker(bind=self.engine, future=True)
-        self._session = self.Session()
+        self.session_factory = sessionmaker(bind=self.engine, future=True, expire_on_commit=False)
+        self.Session = scoped_session(self.session_factory)
+
+    @property
+    def _session(self):
+        return self.Session()
 
     def create_schema(self):
         Base.metadata.create_all(self.engine)
 
     def insert_record(self, record: Base, flush: bool = False):
         """Insere registro. Se flush=False, apenas adiciona ao batch."""
-        self._session.add(record)
+        session = self.Session()
+        session.add(record)
         if flush:
-            self._session.commit()
-            self._session.refresh(record)
+            session.commit()
         return record
 
     def flush(self):
         """Commita todos os registros pendentes de uma vez."""
-        self._session.commit()
+        self.Session().commit()
 
     def query(self, query):
         with self.Session() as session:
@@ -240,6 +245,7 @@ class QdrantClient:
         self.collection_name = collection_name
         self.batch_size = batch_size
         self._batch: list[rest.PointStruct] = []
+        self._lock = threading.Lock()
 
         existing_collections = [c.name for c in self.client.get_collections().collections]
         if collection_name not in existing_collections:
@@ -254,15 +260,20 @@ class QdrantClient:
             vector=vector,
             payload=payload or {'inference_id': entry_id},
         )
-        self._batch.append(point)
-        if len(self._batch) >= self.batch_size:
+        with self._lock:
+            self._batch.append(point)
+            should_flush = len(self._batch) >= self.batch_size
+        if should_flush:
             self.flush()
 
     def flush(self):
         """Envia todos os pontos acumulados de uma vez."""
-        if self._batch:
-            self.client.upsert(collection_name=self.collection_name, points=self._batch)
+        with self._lock:
+            if not self._batch:
+                return
+            points_to_upsert = list(self._batch)
             self._batch = []
+        self.client.upsert(collection_name=self.collection_name, points=points_to_upsert)
 
     def search(self, vector: list[float], top_k: int = 10):
         self.flush()  # Garante que todos os pontos foram enviados antes de buscar

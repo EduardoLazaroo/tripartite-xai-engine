@@ -38,10 +38,23 @@ class GradCAM:
         """Registra forward e backward hooks na camada alvo."""
         for name, module in self.model.named_modules():
             if name == self.target_layer_name:
-                module.register_forward_hook(self._forward_hook)
-                module.register_full_backward_hook(self._backward_hook)
+                self._forward_handle = module.register_forward_hook(self._forward_hook)
+                self._backward_handle = module.register_full_backward_hook(self._backward_hook)
                 return
         raise ValueError(f"Target layer {self.target_layer_name} not found")
+
+    def remove(self):
+        """Remove hooks registrados."""
+        if hasattr(self, '_forward_handle'):
+            self._forward_handle.remove()
+        if hasattr(self, '_backward_handle'):
+            self._backward_handle.remove()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.remove()
 
     def _forward_hook(self, module, input, output):
         """Captura ativacoes durante forward pass."""
