@@ -1,22 +1,23 @@
-# Apresentacao profissional
+# Apresentação Profissional - Persistência Híbrida para XAI
 
-## Identidade e valor
+## Identidade e Valor
 
-Este e um pipeline de pesquisa para persistir, recuperar e auditar explicacoes de modelos de visao computacional. A arquitetura combina PyTorch/Torchvision, MySQL, Qdrant, MinIO, SQLAlchemy e FastAPI, com orquestracao em Docker. O estudo documenta Grad-CAM, perturbacoes e recuperacao contextual/vetorial sobre imagens Oxford-IIIT Pet.
+Este projeto reúne a produção científica e os artefatos de um artigo acadêmico de pós-graduação (UNESP) que propõe uma **arquitetura híbrida de persistência e recuperação de evidências explicativas** em sistemas de visão computacional baseados em Deep Learning. O trabalho resolve o problema do descarte efêmero de mapas Grad-CAM e perturbações, unificando metadados relacionais (MySQL), embeddings semânticos (Qdrant) e armazenamento de objetos (MinIO) para auditoria e governança de IA.
 
-## Texto para publicacao
+## Texto para Publicação
 
-> Este projeto de mestrado investiga como explicacoes de modelos de visao computacional podem deixar de ser artefatos descartaveis e passar a compor uma base consultavel de evidencias. A arquitetura integra metadados relacionais, vetores semanticos e armazenamento de objetos para relacionar imagens, predicoes, mapas Grad-CAM e testes de perturbacao. O desafio foi conectar rastreabilidade experimental e recuperacao eficiente em um unico fluxo reproduzivel por containers. Os benchmarks e relatorios incluidos devem ser rerunados para qualquer uso comparativo, mas o projeto oferece uma base concreta para pesquisa em XAI e engenharia de dados.
+> Modelos de visão computacional como a ResNet-50 geram mapas de atenção visual (Grad-CAM), mas na quase totalidade dos sistemas essas explicações são descartadas logo após a inferência, inviabilizando auditorias futuras. Neste artigo acadêmico desenvolvido na pós-graduação da UNESP, propus e validei uma arquitetura híbrida de persistência que conecta MySQL (metadados, predições e riscos), Qdrant (busca vetorial por similaridade de atenção) e MinIO (armazenamento escalável de imagens e mapas brutos). Os resultados experimentais com 400 inferências demonstram que é possível consultar casos semelhantes em apenas 31,35 ms, criando uma base concreta para rastreabilidade e conformidade regulatória em IA Explicável (XAI).
 
-## Evidencias visuais recomendadas
+## Evidências Visuais Recomendadas
 
-1. Servicos Docker em execucao.
-2. Mapa Grad-CAM e sua evidencia persistida.
-3. Figura de benchmark em `reports/figures/`.
-4. Recuperacao top-5 de explicacoes semelhantes.
+1. Diagrama da arquitetura híbrida de três camadas (`evidencias/figure_3.png`).
+2. Comparativo de mapa Grad-CAM original e sob ruído Gaussiano (`evidencias/02_gradcam_original.png`, `evidencias/04_gradcam_gaussian.png`).
+3. Impacto de perturbação de desfoque óptico (`evidencias/06_gradcam_blur.png`).
+4. Artigo científico completo compilado em PDF (`Artigo_Banco_Dados_Eduardo_Lazaro.pdf`).
+5. Relatório Executivo Word diagramado (`Artigo_BD_Relatorio_Publicacao.docx`).
 
-## Prompt para imagem complementar
+## Prompt para Imagem Complementar
 
 ```text
-Diagrama cientifico de uma plataforma de auditoria de IA explicavel: imagens de animais entram em um modelo ResNet50, produzem predicao e Grad-CAM; MySQL recebe metadados, Qdrant recebe embeddings, MinIO recebe artefatos; uma API consulta e audita as evidencias, estilo paper academico, fundo branco, setas claras, sem logos.
+Diagrama conceitual de persistência híbrida para inteligência artificial explicável: uma imagem de animal entra em um modelo de visão computacional, produzindo Grad-CAM; setas distribuem os dados para três blocos: banco relacional MySQL (tabelas e metadados), banco vetorial Qdrant (vetores de similaridade) e storage MinIO (imagens e mapas em nuvem); estilo de paper científico internacional, fundo branco, azul escuro e verde-água, sem logotipos.
 ```
