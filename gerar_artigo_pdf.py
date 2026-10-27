@@ -1017,7 +1017,11 @@ def main():
     ]
     pdf.add_references(references)
 
+<<<<<<< HEAD
     # Salvar documento
+=======
+    # Salvar documento no diretório local do projeto
+>>>>>>> 62dd760b3ebdfabcb237f0436f8e9a4a12c61caa
     output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Artigo_Banco_Dados_Eduardo_Lazaro.pdf')
     pdf.build(output_path)
     print(f"Documento PDF salvo em: {output_path}")

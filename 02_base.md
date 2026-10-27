@@ -1,9 +1,7 @@
-UNIVERSIDADE ESTADUAL PAULISTA
-EDUARDO LÁZARO ROESLER DE OLIVEIRA, RG nº 566006546
-Aluno Especial está matriculado em disciplina(s) de Programa(s) de PósGraduação desta Unidade Universitária no 1º semestre de 2026
-Programa: Ciência da Computação
-Código Disciplina Crédito C.H. Período
-40665 CCO - Banco de Dados
+UNIVERSIDADE ESTADUAL PAULISTA (UNESP)
+Programa de Pós-Graduação em Ciência da Computação
+Disciplina: 40665 CCO - Banco de Dados
+Autor: Eduardo Lázaro Roesler de Oliveira
 Tema do Artigo: Arquitetura Híbrida de Persistência e Recuperação de Evidências Explicativas em Sistemas de Visão Computacional Baseados em Deep Learning
 
 Status: Artigo gerado com sucesso em Artigo_Banco_Dados_Eduardo_Lazaro.docx (27/06/2026)
