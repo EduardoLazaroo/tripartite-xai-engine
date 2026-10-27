@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--
+  Interface web para visualizacao de resultados de benchmark.
+  
+  Esta interface exibe:
+  - Resumo do experimento (numero de imagens, variantes, storage, tempo de recuperacao)
+  - Selecao de imagem para analise detalhada
+  - Metricas por imagem (label, confianca, tempos de persistencia e recuperacao)
+  - Graficos de delta de confianca e overlap Grad-CAM
+  - Galeria de imagens e mapas Grad-CAM
+  
+  Dependencias:
+  - chart.js (via CDN) para renderizacao de graficos
+  - app.js para logica de carregamento e renderizacao
+  - style.css para estilos
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatorio de Benchmark</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Relatorio de Benchmark</h1>
+    <p>Visualizacao de resultados de persistencia, recuperacao e explicabilidade.</p>
+  </header>
+  <main>
+    <!-- Painel de resumo com cards de metricas gerais -->
+    <section class="panel" id="summary-panel">
+      <h2>Resumo do Experimento</h2>
+      <div id="summary-cards"></div>
+    </section>
+
+    <!-- Seletor de imagem para analise detalhada -->
+    <section class="panel" id="selection-panel">
+      <h2>Selecao de Imagem</h2>
+      <select id="image-select"></select>
+    </section>
+
+    <!-- Tabela de metricas da imagem selecionada -->
+    <section class="panel" id="metrics-panel">
+      <h2>Metricas por Imagem</h2>
+      <div id="metrics-table"></div>
+    </section>
+
+    <!-- Graficos de comparacao (Chart.js) -->
+    <section class="panel" id="charts-panel">
+      <h2>Graficos</h2>
+      <canvas id="confidence-chart"></canvas>
+      <canvas id="gradcam-chart"></canvas>
+    </section>
+
+    <!-- Galeria de imagens e Grad-CAMs -->
+    <section class="panel" id="image-panel">
+      <h2>Imagens e Grad-CAM</h2>
+      <div id="image-gallery"></div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/*
+ * Estilos da interface web de visualizacao de resultados.
+ *
+ * Define o layout e aparencia da pagina de relatorio:
+ * - Cores e tipografia base
+ * - Header com titulo e descricao
+ * - Paineis de conteudo (summary, selecao, metricas, graficos, galeria)
+ * - Cards de resumo e galeria de imagens
+ * - Tabela de metricas
+ */
+
+/* Variaveis de cor e tipografia */
+:root {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #f5f7fa;
+}
+
+/* Reset basico */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabecalho da pagina */
+header {
+  background: #1f4e79;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Conteudo principal */
+main {
+  padding: 20px;
+}
+
+/* Painel generico para agrupar secoes */
+.panel {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/* Grid de cards de resumo */
+#summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/* Card individual de metrica */
+.card {
+  background: #eef4fb;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+/* Grid de galeria de imagens */
+#image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* Card de imagem na galeria */
+.image-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.image-card img {
+  max-width: 100%;
+  display: block;
+}
+
+.image-card .caption {
+  padding: 12px;
+}
+
+/* Tabela de metricas */
+#metrics-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#metrics-table th,
+#metrics-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+#metrics-table th {
+  background: #f0f4fb;
+}
